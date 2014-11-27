@@ -1,5 +1,5 @@
 "use strict";
-angular.module("Todo")
+angular.module("todo")
     .controller('TodoCreationController', ['$scope', 'Todo', '$state', function ($scope, Todo, $state) {
 
         $scope.todo = {};

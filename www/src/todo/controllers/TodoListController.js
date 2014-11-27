@@ -1,5 +1,5 @@
 "use strict";
-angular.module("Todo")
+angular.module("todo")
     .controller('TodoListController', ['$scope', 'Todo', function ($scope, Todo) {
 
         Todo.getAll().success(function (data) {

@@ -1,6 +1,6 @@
 "use strict";
 angular.module("core.shared")
-    .run(function ($ionicPlatform, $state) {
+    .run(function ($ionicPlatform, $state, User) {
         $ionicPlatform.ready(function () {
 
             if (window.cordova && window.cordova.plugins.Keyboard) {
@@ -10,6 +10,14 @@ angular.module("core.shared")
 
                 StatusBar.overlaysWebView(true);
             }
-            $state.go('signUpAuth');
+            User.setCurrentUser();
+
+
+            if(User.currentUser){
+                $state.go('todos');
+            }else{
+                $state.go('signUpAuth');
+            }
+
         });
     });

@@ -15,4 +15,3 @@ angular.module("core.auth")
             templateUrl: "src/auth/views/sign-up.html"
         });
     });
-

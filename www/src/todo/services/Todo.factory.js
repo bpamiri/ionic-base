@@ -1,5 +1,5 @@
 "use strict";
-angular.module("Todo")
+angular.module("todo")
     .factory('Todo', ['$http', 'PARSE_CREDENTIALS', function ($http, PARSE_CREDENTIALS) {
         return {
             getAll: function () {

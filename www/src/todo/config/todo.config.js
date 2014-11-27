@@ -1,5 +1,5 @@
 "use strict";
-angular.module("Todo")
+angular.module("todo")
     .config(function ($stateProvider) {
         $stateProvider.state('todos', {
             url: '/todos',

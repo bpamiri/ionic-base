@@ -2,12 +2,6 @@
 angular.module("core.auth")
     .controller("SignUpController", ['$scope', '$location', 'User', function ($scope, $location, User) {
 
-
-        console.log(User.currentUser, "hello");
-        if (User.currentUser) {
-            $location.path("/todos");
-        }
-
         User.currentUser = Parse.User.current();
 
         $scope.signUp = function (form) {

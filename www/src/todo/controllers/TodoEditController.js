@@ -1,5 +1,5 @@
 "use strict";
-angular.module("Todo")
+angular.module("todo")
 
     .controller('TodoEditController', ['$scope', 'Todo', '$state', '$stateParams', function ($scope, Todo, $state, $stateParams) {
 
