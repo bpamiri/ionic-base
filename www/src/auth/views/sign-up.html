@@ -1,0 +1,44 @@
+<ion-pane>
+
+    <ion-content>
+
+            <ion-list>
+
+                    <div class="bar bar-header">
+                        <div class="h1 title">Sign Up</div>
+                    </div>
+
+                    <div class="content has-header">
+                        <form>
+
+                            <div class="list">
+
+                                <label class="item item-input">
+                                    <input type="email" ng-model="user.email" placeholder="Email"/>
+                                </label>
+
+                                <label class="item item-input">
+                                    <input type="text" ng-model="user.username" placeholder="Username"/>
+                                </label>
+
+                                <label class="item item-input">
+                                    <input type="password" ng-model="user.password" placeholder="Password"/>
+                                </label>
+
+                            </div>
+                            <div class="padding">
+
+                                <button class="button button-block button-positive activated"
+                                        ng-click="signUp(user)">Sign up
+                                </button>
+                                <a class="button button-block button-positive activated"
+                                   ui-sref="loginAuth">Log in
+                                </a>
+
+                            </div>
+                        </form>
+                    </div>
+            </ion-list>
+
+    </ion-content>
+</ion-pane>
