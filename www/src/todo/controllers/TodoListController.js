@@ -2,7 +2,7 @@
 angular.module("todo")
     .controller('TodoListController', ['$scope', 'Todo', function ($scope, Todo) {
 
-        Todo.getAll().success(function (data) {
+        Todo.getAll({userId: Parse.User.current().userId}).success(function (data) {
             $scope.items = data.results;
         });
 

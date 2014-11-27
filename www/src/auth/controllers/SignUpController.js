@@ -1,8 +1,6 @@
 "use strict";
 angular.module("core.auth")
-    .controller("SignUpController", ['$scope', '$location', 'User', function ($scope, $location, User) {
-
-        User.currentUser = Parse.User.current();
+    .controller("SignUpController", ['$scope', '$state', function ($scope, $state) {
 
         $scope.signUp = function (form) {
             var user = new Parse.User();
@@ -12,9 +10,8 @@ angular.module("core.auth")
 
             user.signUp(null, {
                 success: function (user) {
-                    $scope.currentUser = user;
 
-                    $location.path("/");
+                    $state.go("todos");
 
                 },
                 error: function (user, error) {

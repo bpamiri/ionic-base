@@ -1,14 +1,13 @@
 "use strict";
 angular.module("core.auth")
 
-    .controller('LoginController', ['$scope', '$location', 'User', function ($scope, $location, User) {
+    .controller('LoginController', ['$scope', '$location', function ($scope, $location) {
 
-        User.currentUser = Parse.User.current();
 
         $scope.logIn = function (form) {
             Parse.User.logIn(form.username, form.password, {
                 success: function (user) {
-                    User.currentUser = user;
+
                     $location.path("/todos");
                 },
                 error: function (user, error) {

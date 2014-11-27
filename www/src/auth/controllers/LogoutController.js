@@ -1,10 +1,9 @@
 "use strict";
 angular.module("core.auth")
-    .controller("LogoutController", ['$scope', '$locations', 'User',function ($scope, $location, User) {
+    .controller("LogoutController", ['$scope', '$locations',function ($scope, $location) {
 
         $scope.logOut = function (form) {
             Parse.User.logOut();
-            User.currentUser = null;
             $location.path("/user/login")
         };
     }]);
