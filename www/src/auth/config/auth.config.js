@@ -8,7 +8,7 @@ angular.module("core.auth")
         }).state("logoutAuth", {
             url: "/auth/logout",
             controller: "LogoutController",
-            templateUrl: "src/auth/views/login.html"
+            templateUrl: "src/auth/views/logout.html"
         }).state("signUpAuth", {
             url: "/auth/sign-up",
             controller: "SignUpController",

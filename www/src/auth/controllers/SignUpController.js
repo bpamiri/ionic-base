@@ -2,6 +2,10 @@
 angular.module("core.auth")
     .controller("SignUpController", ['$scope', '$state', function ($scope, $state) {
 
+        if (Parse.User.current()) {
+            $state.go("todos");
+        }
+
         $scope.signUp = function (form) {
             var user = new Parse.User();
             user.set("email", form.email);
